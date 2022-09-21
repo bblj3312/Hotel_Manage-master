@@ -24,9 +24,8 @@
 <div id="app">
     <!--顶栏-->
     <header>
-        <div style="float:left;"></div>
-        <div style="float: right">
-        </div>
+        <div style="float:left"></div>
+        <div style="float: right"></div>
     </header>
 
     <div class="main" id="">
