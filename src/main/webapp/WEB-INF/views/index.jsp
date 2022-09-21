@@ -28,7 +28,7 @@
         <div style="float: right"></div>
     </header>
 
-    <div class="main1" id="">
+    <div class="main1" id="app">
         <!--左栏-->
         <div class="left">
             <ul class="cl" >
