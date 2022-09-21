@@ -50,7 +50,7 @@
         <!--右侧-->
         <div class="right">
             <blockquote>
-                    <h1 align="center">欢迎登陆后台管理系统</h1>
+                    <h1 align="center"style="margin-top: 250px;font-size:50px">欢迎使用酒店后台管理系统</h1>
             </blockquote>
         </div>
     </div>
