@@ -82,9 +82,10 @@ header {
     width: 100%;
     box-sizing: border-box;
     background-color: #739dc6;
+    opacity: 0;
     position: fixed;
     z-index: 1001;
-    color: #739dc6;
+    color: #bebebe;
 }
 header h1{
     height: 50px;
@@ -114,8 +115,6 @@ header .breadcrumb li{
 }
 
 
-
-
 .main {
     min-height: 100%;
     width: 100%;
@@ -134,10 +133,12 @@ header .breadcrumb li{
 .left {
     position: fixed;
     left: 0;
-    top: 50px;
+    top: 0;
     width: 150px;
     height: 100%;
-    background: #739dc6;
+    background: #eeeeee;
+    padding-top: 50px;
+    opacity: 0.75;
     overflow-x: auto;
 }
 
@@ -168,7 +169,7 @@ header .breadcrumb li{
 .left ul li a:hover,
 .left ul li a.active {
     color: white;
-    background: #739dc6;
+    background: #bebebe;
 }
 
 .left ul li i:first-child {
@@ -183,7 +184,7 @@ header .breadcrumb li{
 }
 .left ul li>div{
     position: relative;
-    background-color: #81a6cb;
+    background-color: #bebebe;
 }
 .left ul li>div a {
     padding-left: 45px;
