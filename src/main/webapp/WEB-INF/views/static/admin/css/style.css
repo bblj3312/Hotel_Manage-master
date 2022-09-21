@@ -81,10 +81,10 @@ header {
     line-height: 50px;
     width: 100%;
     box-sizing: border-box;
-    background-color: #bfd3ea;
+    background-color: #739dc6;
     position: fixed;
     z-index: 1001;
-    color: #bfd3ea;
+    color: #739dc6;
 }
 header h1{
     height: 50px;
@@ -121,6 +121,13 @@ header .breadcrumb li{
     width: 100%;
     overflow: hidden;
 }
+.main1 {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-image:url(../img/1.jpg);
+    background-size: cover;
+}
 
 /*左栏*/
 
@@ -130,7 +137,7 @@ header .breadcrumb li{
     top: 50px;
     width: 150px;
     height: 100%;
-    background: #bfd3ea;
+    background: #739dc6;
     overflow-x: auto;
 }
 
@@ -161,7 +168,7 @@ header .breadcrumb li{
 .left ul li a:hover,
 .left ul li a.active {
     color: white;
-    background: #bfd3ea;
+    background: #739dc6;
 }
 
 .left ul li i:first-child {
@@ -176,7 +183,7 @@ header .breadcrumb li{
 }
 .left ul li>div{
     position: relative;
-    background-color: #d2e4f8;
+    background-color: #81a6cb;
 }
 .left ul li>div a {
     padding-left: 45px;

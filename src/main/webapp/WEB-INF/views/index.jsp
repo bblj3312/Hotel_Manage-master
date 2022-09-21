@@ -28,7 +28,7 @@
         <div style="float: right"></div>
     </header>
 
-    <div class="main" id="">
+    <div class="main1" id="">
         <!--左栏-->
         <div class="left">
             <ul class="cl" >
