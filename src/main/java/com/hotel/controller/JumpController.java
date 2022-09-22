@@ -27,10 +27,6 @@ public class JumpController {
         return "pwd_update";
     }
 
-    @RequestMapping("/web_index")
-    public String web_index(){
-        return "web_index";
-    }
 
     @RequestMapping("/index")
     public String index(){

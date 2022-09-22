@@ -47,7 +47,7 @@ public class GuestsController {
         mv.addObject("g",guests);
         mv.setViewName("guests_update");
         return mv;
-    }
+    }//展示列表点击修改按钮后返回相关信息到修改页面
 
     @RequestMapping("/update2")
     public String update2(Guests g ){
