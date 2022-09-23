@@ -24,6 +24,9 @@
     "list": [ {
         "name": "房间列表",
         "url": "/home/list"
+    },{
+        "name": "预订管理",
+        "url": "/home/reserve"
     }]
 }, {
     "name": "会员管理",

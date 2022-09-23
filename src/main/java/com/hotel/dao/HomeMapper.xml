@@ -6,7 +6,7 @@
 
     <insert id="addHome" parameterType="Home">
         insert into home (Num,H_Type,Price,State,Img,Text)
-         values (#{Num},#{H_Type},#{Price},#{State},#{Img},#{Text});
+        values (#{Num},#{H_Type},#{Price},#{State},#{Img},#{Text});
     </insert>
 
     <delete id="deleteHomeById" parameterType="int">
@@ -17,7 +17,7 @@
     <update id="updateHomeById" parameterType="Home">
         update  home
         set  Num=#{Num},H_Type=#{H_Type},Price=#{Price},State=#{State},Img=#{Img},Text=#{Text}
-         where id=#{id};
+        where id=#{id};
     </update>
 
     <select id="queryHomeById" resultType="Home">
@@ -29,6 +29,11 @@
         select * from home
     </select>
 
+    <select id="queryHomeReserve" resultType="Home">
+        select * from home
+        where state = '已预订';
+    </select>
+
     <select id="queryHomeByNum" resultType="Home">
         select * from home
         where num=#{num};
@@ -37,7 +42,7 @@
     <update id="updateH_TypeById" parameterType="Home">
         update  home
         set State=#{State}
-         where id=#{id};
+        where id=#{id};
     </update>
 
 </mapper>

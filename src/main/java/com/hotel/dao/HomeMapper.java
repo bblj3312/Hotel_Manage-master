@@ -18,6 +18,8 @@ public interface HomeMapper {
 
     ArrayList<Home> queryAllHome();
 
+    ArrayList<Home> queryHomeReserve(String state);
+
     Home queryHomeByNum(int num);
 
     int updateH_TypeById(Home home);

@@ -74,7 +74,7 @@
                             <br>
                             <input type="radio" name="State" value="已入住" title="已入住">
                             <br>
-                            <input type="radio" name="State" value="未打扫" title="未打扫" >
+                            <input type="radio" name="State" value="已预订" title="已预订" >
                         </div>
                     </div>
                 </div>

@@ -125,6 +125,13 @@
                 </div>
 
                 <div class="layui-form-item">
+                    <label class="layui-form-label">图片</label>
+                    <div   class="layui-input-inline">
+                        <input type="file" name="file" >
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
                     <div class="layui-input-block">
                         <button class="layui-btn" type="submit">立即提交</button>
                         <button class="layui-btn layui-btn-danger" type="reset">清空内容</button>

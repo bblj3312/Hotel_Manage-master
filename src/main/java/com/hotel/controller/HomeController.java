@@ -19,7 +19,7 @@ import java.util.UUID;
 public class HomeController {
 
     @Autowired
-            HomeServiceImpl homeService;
+    HomeServiceImpl homeService;
 
     @RequestMapping("/add")
     public String add(Home home, Model model) throws IOException{
@@ -67,6 +67,15 @@ public class HomeController {
         return mv;
     }
 
+    @RequestMapping("/reserve")
+    public ModelAndView reserve(String state){
+        ModelAndView mv = new ModelAndView();
+        List<Home> homeList=homeService.queryHomeReserve(state);
+        mv.addObject("reserve",homeList);
+        mv.setViewName("home_reserve");
+        return mv;
+    }
+
     @RequestMapping("/update1")
     public ModelAndView update1(Integer  id){
         ModelAndView mv = new ModelAndView();
@@ -78,28 +87,6 @@ public class HomeController {
 
     @RequestMapping("/update2")
     public String update2(Home h)throws IOException{
-        String sqlPath = null;
-        //定义文件保存的本地路径
-        String localPath="E:\\Java 项目\\Hotel_Manage\\src\\main\\webapp\\upload";
-        //定义 文件名
-        String filename=null;
-        if(!h.getFile().isEmpty()){
-            //生成uuid作为文件名称
-            String uuid = UUID.randomUUID().toString().replaceAll("-","");
-            //获得文件类型（可以判断如果不是图片，禁止上传）
-            String contentType=h.getFile().getContentType();
-            //获得文件后缀名
-            String suffixName=contentType.substring(contentType.indexOf("/")+1);
-            //得到 文件名
-            filename=uuid+"."+suffixName;
-            System.out.println(filename);
-            //文件保存路径
-            h.getFile().transferTo(new File(localPath+filename));
-        }
-        //把图片的相对路径保存至数据库
-        sqlPath = "/upload/"+filename;
-        System.out.println(sqlPath);
-        h.setImg(sqlPath);
 
         homeService.updateHomeById(h);
         return ("redirect:/home/list");

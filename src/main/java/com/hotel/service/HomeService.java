@@ -4,7 +4,8 @@ import com.hotel.pojo.Home;
 
 import java.util.ArrayList;
 
-public interface HomeService {
+public interface
+HomeService {
 
     int addHome(Home home);
 
@@ -16,7 +17,10 @@ public interface HomeService {
 
     ArrayList<Home> queryAllHome();
 
+    ArrayList<Home> queryHomeReserve(String state);
+
     Home queryHomeByNum(int num);
+
 
     int updateH_TypeById(Home home);
 }

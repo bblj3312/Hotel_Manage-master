@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class HomeServiceImpl  implements HomeService{
 
     @Autowired
-            HomeMapper homeMapper;
+    HomeMapper homeMapper;
 
 
     public int addHome(Home home) {
@@ -32,6 +32,8 @@ public class HomeServiceImpl  implements HomeService{
     public ArrayList<Home> queryAllHome() {
         return homeMapper.queryAllHome();
     }
+
+    public ArrayList<Home> queryHomeReserve(String state) {return homeMapper.queryHomeReserve(state);}
 
     public Home queryHomeByNum(int num) {
         return homeMapper.queryHomeByNum(num);
