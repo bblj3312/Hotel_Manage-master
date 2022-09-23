@@ -17,6 +17,11 @@ public class JumpController {
         return "vip_add";
     }
 
+    @RequestMapping("/meal_add")
+    public String meal(){
+        return "meal_add";
+    }
+
     @RequestMapping("/home_add")
     public String home(){
         return "home_add";
@@ -26,7 +31,6 @@ public class JumpController {
     public String pwd(){
         return "pwd_update";
     }
-
 
     @RequestMapping("/index")
     public String index(){

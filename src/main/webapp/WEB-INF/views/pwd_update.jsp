@@ -55,7 +55,7 @@
         <div class="right">
 
             <fieldset class="layui-elem-field layui-field-title">
-                <legend>修改密码</legend>
+                <legend>管理信息</legend>
             </fieldset>
 
             <form class="layui-form " action="${pageContext.request.contextPath}/admin/updatePwd" onsubmit="return sumbit_sure()">
@@ -63,7 +63,7 @@
                 <div class="layui-form-item">
                     <label class="layui-form-label">管理员</label>
                     <div class="layui-input-block">
-                        <input type="text"  placeholder="admin" class="layui-input" readonly="readonly"/>
+                        <input type="text"  id="username" name="username" class="layui-input">
                     </div>
                 </div>
 
@@ -79,7 +79,7 @@
                         <button class="layui-btn" lay-submit lay-filter="submit">提交修改</button>
                     </div>
                 </div>
-                
+
             </form>
 
         </div>

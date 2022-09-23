@@ -14,7 +14,7 @@
 <body id="error-page">
 <div class="row">
     <div class="panel-body">
-        <h1>:)</h1><h4 class="success">修改密码成功</h4>
+        <h1>:)</h1><h4 class="success">修改管理员信息成功！</h4>
         <h4 class="detail"></h4>
         <h4 class="jump">
             点击 <a id="href" href="${pageContext.request.contextPath}/jump/pwd_update">返回</a>

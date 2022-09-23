@@ -38,12 +38,24 @@
         "url": "/vip/list"
     }]
 }, {
+        "name": "餐饮管理",
+        "icon": "&#xe735;",
+        "url": "",
+        "hidden": true,
+        "list": [{
+            "name": "新增菜品",
+            "url": "/jump/meal_add"
+        }, {
+            "name": "菜品列表",
+            "url": "/meal/list"
+        }]
+    },{
     "name": "系统设置",
     "icon": "&#xe620;",
     "url": "",
     "hidden": true,
     "list": [{
-        "name": "修改密码",
+        "name": "管理信息",
         "url": "/jump/pwd_update"
     }]
 },  {
