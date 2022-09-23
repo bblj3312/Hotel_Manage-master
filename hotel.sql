@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50736
 File Encoding         : 65001
 
-Date: 2022-09-23 08:09:49
+Date: 2022-09-23 21:32:32
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -22,7 +22,7 @@ DROP TABLE IF EXISTS `admin`;
 CREATE TABLE `admin` (
   `username` varchar(10) NOT NULL COMMENT '用户名',
   `password` int(10) NOT NULL COMMENT '密码',
-  PRIMARY KEY (`username`) USING BTREE
+  PRIMARY KEY (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
@@ -78,15 +78,15 @@ CREATE TABLE `home` (
 -- Records of home
 -- ----------------------------
 INSERT INTO `home` VALUES ('1', '201', '普通大床房', '120', '已入住', '/upload/null', '舒适\r\n                    \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    ');
-INSERT INTO `home` VALUES ('2', '202', '普通大床房', '120', '空房', '/upload/b799f7b4beda4bb591a4f8f88e0c6b60.jpeg', '时尚\r\n                        \r\n                    ');
-INSERT INTO `home` VALUES ('3', '203', '高级双床房', '150', '空房', '/upload/749708aa142945e783ee9935c159e121.jpeg', '时尚\r\n                        \r\n                    \r\n                    ');
-INSERT INTO `home` VALUES ('4', '204', '豪华大床房', '200', '未打扫', null, '豪华\r\n                        \r\n                    ');
+INSERT INTO `home` VALUES ('2', '202', '普通大床房', '120', '已预订', '/upload/b799f7b4beda4bb591a4f8f88e0c6b60.jpeg', '时尚\r\n                        \r\n                    ');
+INSERT INTO `home` VALUES ('3', '203', '高级双床房', '150', '已预订', '/upload/749708aa142945e783ee9935c159e121.jpeg', '时尚\r\n                        \r\n                    \r\n                    ');
+INSERT INTO `home` VALUES ('4', '204', '豪华大床房', '200', '已入住', null, '豪华\r\n                        \r\n                    ');
 INSERT INTO `home` VALUES ('5', '205', '豪华大床房', '310', '空房', '/upload/null', '豪华\r\n                        \r\n                    ');
 INSERT INTO `home` VALUES ('6', '206', '高级大床房', '200', '空房', '/upload/4082a28fbe554cefbc87f9a4bd1cfbe2.jpeg', '浩荡');
 INSERT INTO `home` VALUES ('7', '207', '豪华套房', '300', '已入住', null, '豪华\r\n                        \r\n                    ');
 INSERT INTO `home` VALUES ('8', '208', '豪华套房', '310', '空房', '/upload/fd5e44da3dad49589d111fbb70ff186f.jpeg', '豪华\r\n                        ');
 INSERT INTO `home` VALUES ('9', '209', '普通双床房', '105', '空房', '/upload/3873ac226f86435eb99893737ea742d4.jpeg', '朴实\r\n                        ');
-INSERT INTO `home` VALUES ('10', '210', '豪华圆床房', '255', '未打扫', null, '浪漫\r\n                        \r\n                    ');
+INSERT INTO `home` VALUES ('10', '210', '豪华圆床房', '255', '已入住', null, '浪漫\r\n                        \r\n                    ');
 INSERT INTO `home` VALUES ('11', '301', '大床钟点房（四小时）', '60', '空房', '/upload/a8e38f3437d24de6b5d166d8f71b3886.jpeg', '忙碌\r\n                        ');
 INSERT INTO `home` VALUES ('12', '302', '大床钟点房（三小时）', '50', '已入住', '/upload/9061f597b691483caffde45a98cae599.jpeg', '急促\r\n                        \r\n                    \r\n                    \r\n                    ');
 INSERT INTO `home` VALUES ('13', '303', '双床终点房（三小时）', '60', '空房', '/upload/f19f0019b92c44e0b9c923f4e9921ca6.jpeg', '急促\r\n                        ');
@@ -124,6 +124,27 @@ INSERT INTO `home` VALUES ('47', '508', '豪华大床房', '200', '空房', '/up
 INSERT INTO `home` VALUES ('48', '509', '豪华大床房', '800', '空房', '/upload/6f93c49fd49f456e9b2c1b0ed451e635.jpeg', '请填写房间相关信息......\r\n                        ');
 INSERT INTO `home` VALUES ('49', '509', '豪华大床房', '800', '空房', '/upload/34565e27a31a474f8a272d84c4ddecb2.jpeg', '请填写房间相关信息......\r\n                        ');
 INSERT INTO `home` VALUES ('50', '601', '高级大床房', '500', '空房', '/upload/a1bf2dbd8f1746ed85a9b1935896b8cf.jpeg', '请填写房间相关信息......\r\n                        ');
+
+-- ----------------------------
+-- Table structure for meal
+-- ----------------------------
+DROP TABLE IF EXISTS `meal`;
+CREATE TABLE `meal` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `price` int(10) NOT NULL,
+  `m_type` varchar(20) NOT NULL,
+  `text` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
+
+-- ----------------------------
+-- Records of meal
+-- ----------------------------
+INSERT INTO `meal` VALUES ('1', '红烧鲫鱼', '70', '荤菜', '妈妈的味道');
+INSERT INTO `meal` VALUES ('2', '酸辣土豆丝', '15', '素菜', '酸辣可口开胃菜');
+INSERT INTO `meal` VALUES ('3', '藜蒿炒腊肉', '40', '荤菜', '鄱阳湖里的草，南昌人的宝');
+INSERT INTO `meal` VALUES ('4', '手撕包菜', '18', '素菜', '纯手撕，给您最纯真的体验');
 
 -- ----------------------------
 -- Table structure for vip
