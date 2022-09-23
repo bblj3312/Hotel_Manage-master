@@ -58,7 +58,7 @@
                         <span style="color: red; font-weight: bold" > &nbsp;${error}</span>
                     </div>
                     <div class="layui-input-inline" style="width:320px ;float: left" >
-                        <input type="number" name="findByNum" placeholder="输入房间号进行查询" class="                 " >
+                        <input type="number" name="findByNum" placeholder="输入房间号进行查询" class="layui-input key" >
                     </div>
                     <div style="float: right">
                         <button type="submit" class="layui-btn " style="width: 100px">查询</button>

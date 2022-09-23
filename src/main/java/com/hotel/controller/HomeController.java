@@ -24,29 +24,6 @@ public class HomeController {
     @RequestMapping("/add")
     public String add(Home home, Model model) throws IOException{
 
-        String sqlPath = null;
-        //定义文件保存的本地路径
-        String localPath="E:\\IDEA workspace\\Hotel_Manage-master\\src\\main\\webapp\\upload";
-        //定义 文件名
-        String filename=null;
-        if(!home.getFile().isEmpty()){
-            //生成uuid作为文件名称
-            String uuid = UUID.randomUUID().toString().replaceAll("-","");
-            //获得文件类型（可以判断如果不是图片，禁止上传）
-            String contentType=home.getFile().getContentType();
-            //获得文件后缀名
-            String suffixName=contentType.substring(contentType.indexOf("/")+1);
-            //得到 文件名
-            filename=uuid+"."+suffixName;
-            System.out.println(filename);
-            //文件保存路径
-            home.getFile().transferTo(new File(localPath+filename));
-        }
-        //把图片的相对路径保存至数据库
-        sqlPath = "/upload/"+filename;
-        System.out.println(sqlPath);
-        home.setImg(sqlPath);
-
         homeService.addHome(home);
         model.addAttribute("home",home);
         return "home_show";

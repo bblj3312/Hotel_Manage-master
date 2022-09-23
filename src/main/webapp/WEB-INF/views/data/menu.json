@@ -29,18 +29,6 @@
         "url": "/home/reserve"
     }]
 }, {
-    "name": "会员管理",
-    "icon": "&#xe735;",
-    "url": "",
-    "hidden": true,
-    "list": [{
-        "name": "新增会员",
-        "url": "/jump/vip_add"
-    }, {
-        "name": "会员列表",
-        "url": "/vip/list"
-    }]
-}, {
         "name": "餐饮管理",
         "icon": "&#xe735;",
         "url": "",
