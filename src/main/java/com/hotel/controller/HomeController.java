@@ -26,7 +26,7 @@ public class HomeController {
 
         String sqlPath = null;
         //定义文件保存的本地路径
-        String localPath="E:\\Idea workspace\\Hotel_Manage\\src\\main\\webapp\\upload";
+        String localPath="E:\\IDEA workspace\\Hotel_Manage-master\\src\\main\\webapp\\upload";
         //定义 文件名
         String filename=null;
         if(!home.getFile().isEmpty()){

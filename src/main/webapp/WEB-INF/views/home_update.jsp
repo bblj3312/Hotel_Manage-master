@@ -98,12 +98,6 @@
                     </textarea>
                     </div>
 
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">图片</label>
-                        <div   class="layui-input-inline">
-                            <input type="file" name="file" >
-                        </div>
-                    </div>
                 </div>
 
                 <div class="layui-form-item">

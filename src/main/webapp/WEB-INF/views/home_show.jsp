@@ -75,13 +75,6 @@
                     </div>
                 </div>
 
-                <div class="layui-form-item">
-                    <label class="layui-form-label">图片</label>
-                    <div class="layui-input-block">
-                        <img src="${home.img}" width="700" height="400"/>
-                    </div>
-                </div>
-
                     <div class="layui-form-item">
                         <label class="layui-form-label">房间描述</label>
                         <div class="layui-input-inline">

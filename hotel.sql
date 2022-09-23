@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50736
 File Encoding         : 65001
 
-Date: 2022-09-19 19:45:33
+Date: 2022-09-23 08:09:49
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -28,7 +28,7 @@ CREATE TABLE `admin` (
 -- ----------------------------
 -- Records of admin
 -- ----------------------------
-INSERT INTO `admin` VALUES ('admin', '1');
+INSERT INTO `admin` VALUES ('admin', '12');
 
 -- ----------------------------
 -- Table structure for guests
@@ -49,13 +49,13 @@ CREATE TABLE `guests` (
   KEY `h_type` (`h_type`) USING BTREE,
   CONSTRAINT `guests_ibfk_1` FOREIGN KEY (`num`) REFERENCES `home` (`num`),
   CONSTRAINT `guests_ibfk_2` FOREIGN KEY (`h_type`) REFERENCES `home` (`h_type`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of guests
 -- ----------------------------
-INSERT INTO `guests` VALUES ('1', '李斯', '男', '789451321876132132', '3217864523', '2020-7-5-上午2:41:41', '7-6', '普通三人间', '207');
-INSERT INTO `guests` VALUES ('2', '王惕若', '女', '412348754643137765', '51513213', '2020-7-5-上午2:43:10', '7-7', '普通大床房', '201');
+INSERT INTO `guests` VALUES ('1', '张三', '男', '360102200110153312', '18679111265', '2022-7-5-上午2:41:41', '7-6', '普通大床房', '207');
+INSERT INTO `guests` VALUES ('2', '王五', '男', '360102200310153311', '15979055037', '2022-9-15-上午2:43:10', '9-18', '豪华大床房', '201');
 
 -- ----------------------------
 -- Table structure for home
@@ -77,11 +77,11 @@ CREATE TABLE `home` (
 -- ----------------------------
 -- Records of home
 -- ----------------------------
-INSERT INTO `home` VALUES ('1', '201', '普通大床房', '120', '未打扫', '/upload/null', '舒适\r\n                    \r\n                    \r\n                    \r\n                    \r\n                    ');
+INSERT INTO `home` VALUES ('1', '201', '普通大床房', '120', '已入住', '/upload/null', '舒适\r\n                    \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    \r\n                    ');
 INSERT INTO `home` VALUES ('2', '202', '普通大床房', '120', '空房', '/upload/b799f7b4beda4bb591a4f8f88e0c6b60.jpeg', '时尚\r\n                        \r\n                    ');
 INSERT INTO `home` VALUES ('3', '203', '高级双床房', '150', '空房', '/upload/749708aa142945e783ee9935c159e121.jpeg', '时尚\r\n                        \r\n                    \r\n                    ');
 INSERT INTO `home` VALUES ('4', '204', '豪华大床房', '200', '未打扫', null, '豪华\r\n                        \r\n                    ');
-INSERT INTO `home` VALUES ('5', '205', '豪华大床房', '210', '空房', '/upload/a3bfda20a42c4204afecbbe0210d3229.jpeg', '豪华\r\n                        ');
+INSERT INTO `home` VALUES ('5', '205', '豪华大床房', '310', '空房', '/upload/null', '豪华\r\n                        \r\n                    ');
 INSERT INTO `home` VALUES ('6', '206', '高级大床房', '200', '空房', '/upload/4082a28fbe554cefbc87f9a4bd1cfbe2.jpeg', '浩荡');
 INSERT INTO `home` VALUES ('7', '207', '豪华套房', '300', '已入住', null, '豪华\r\n                        \r\n                    ');
 INSERT INTO `home` VALUES ('8', '208', '豪华套房', '310', '空房', '/upload/fd5e44da3dad49589d111fbb70ff186f.jpeg', '豪华\r\n                        ');
@@ -139,13 +139,11 @@ CREATE TABLE `vip` (
   `startTime` varchar(30) NOT NULL,
   `endTime` varchar(30) NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of vip
 -- ----------------------------
-INSERT INTO `vip` VALUES ('1', '刘傲然', '男', '7897545642316', '4687864', '初级会员', '2020-7-2', '2021-10-2');
-INSERT INTO `vip` VALUES ('2', '阿飞', '男', '764567898979789', '456546', '初级会员', '2020-7-3', '2021-7-3');
-INSERT INTO `vip` VALUES ('3', '李德无', '男', '7897787894564564867', '978978', '高级会员', '2020-7-4', '2022-5-4');
-INSERT INTO `vip` VALUES ('4', '王治郅', '女', '789456496922286452', '123456784', '中级会员', '2020-7-5', '2021-7-5');
-INSERT INTO `vip` VALUES ('6', '小飞飞', '男', '139555648785412587', '12387854654', '初级会员', '2020-12-29', '2021-6-29');
+INSERT INTO `vip` VALUES ('1', '张三', '男', '360102200110153312', '18679111265', '高级会员', '2022-7-2', '2023-7-2');
+INSERT INTO `vip` VALUES ('2', '李四', '男', '360102200210153314', '13077918516', '中级会员', '2022-9-10', '2023-9-10');
+INSERT INTO `vip` VALUES ('3', '王五', '女', '360102200310153311', '15979055037', '中级会员', '2022-9-15', '2023-9-15');
