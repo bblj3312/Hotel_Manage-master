@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50736
 File Encoding         : 65001
 
-Date: 2022-09-23 21:32:32
+Date: 2022-09-24 08:10:22
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -145,26 +145,3 @@ INSERT INTO `meal` VALUES ('1', '红烧鲫鱼', '70', '荤菜', '妈妈的味道
 INSERT INTO `meal` VALUES ('2', '酸辣土豆丝', '15', '素菜', '酸辣可口开胃菜');
 INSERT INTO `meal` VALUES ('3', '藜蒿炒腊肉', '40', '荤菜', '鄱阳湖里的草，南昌人的宝');
 INSERT INTO `meal` VALUES ('4', '手撕包菜', '18', '素菜', '纯手撕，给您最纯真的体验');
-
--- ----------------------------
--- Table structure for vip
--- ----------------------------
-DROP TABLE IF EXISTS `vip`;
-CREATE TABLE `vip` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `name` varchar(10) NOT NULL,
-  `sex` varchar(10) NOT NULL,
-  `card` bigint(20) NOT NULL,
-  `phone` bigint(20) NOT NULL,
-  `v_type` varchar(10) NOT NULL,
-  `startTime` varchar(30) NOT NULL,
-  `endTime` varchar(30) NOT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
-
--- ----------------------------
--- Records of vip
--- ----------------------------
-INSERT INTO `vip` VALUES ('1', '张三', '男', '360102200110153312', '18679111265', '高级会员', '2022-7-2', '2023-7-2');
-INSERT INTO `vip` VALUES ('2', '李四', '男', '360102200210153314', '13077918516', '中级会员', '2022-9-10', '2023-9-10');
-INSERT INTO `vip` VALUES ('3', '王五', '女', '360102200310153311', '15979055037', '中级会员', '2022-9-15', '2023-9-15');
